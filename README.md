@@ -7,4 +7,4 @@ Resizing algorithm based on http://www.white-hat-web-design.co.uk/blog/resizing-
 
 To use, simply run:
 
-python resize.py file1.ext file2.ext... width height
+python resize.py file1.ext file2.ext... height width
