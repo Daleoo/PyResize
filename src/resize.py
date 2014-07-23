@@ -19,16 +19,15 @@ def divide(x,y):
 
 #Gets the filenames from the command-line arguments
 def get_files_from_args():
-	files = []
 	if(len(sys.argv) > 3):
-		for args in sys.argv[1:len(sys.argv) -2]:
-			files.append(args)
-	return files
-
+		return sys.argv[1:len(sys.argv)-2]
+	else:
+		return []
 #Gets the target size from the command-line arguments
 def get_size_from_args():
 	sys_len = len(sys.argv)
-	return (int(sys.argv[sys_len - 1]), int(sys.argv[sys_len - 2]))
+	if(sys_len > 3):
+		return (int(sys.argv[sys_len - 1]), int(sys.argv[sys_len - 2]))
 
 def resize(image, size):
         return image.resize(size,Image.ANTIALIAS)
